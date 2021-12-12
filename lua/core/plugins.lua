@@ -1,27 +1,41 @@
 ---|| @lua/plugins.lua ||---
 
+local fn = vim.fn
+local install_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
 
--- the following block installs paq manager if not installed already
+if fn.empty(fn.glob(install_path)) > 0 then
+  fn.system({ 'git', 'clone', '--depth=1', 'https://github.com/wbthomason/packer.nvim', install_path })
+end
 
---[[
--- local fn = vim.fn
--- local install_path = fn.stdpath('data') .. '/site/pack/paqs/opt/paq-nvim'
--- if fn.empty(fn.glob(install_path)) > 0 then
---  fn.system({'git', 'clone', '--depth=1', 'https://github.com/savq/paq-nvim.git', install_path})
--- end
---]]
+-- loads packer
+vim.cmd [[packadd packer.nvim]]
 
+return require('packer').startup(
+function(use)
+  -- packer
+  use { 'wbthomason/packer.nvim', opt = true }
 
--- loads paq-manager
+  -- file explorer
+  use { 'kyazdani42/nvim-tree.lua' }
 
-vim.cmd[[packadd paq-nvim]]
+  -- lsp
+  use { 'neovim/nvim-lspconfig' }
 
-local paq = require('paq-nvim').paq
+  -- treesitter
+  use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+  -- treesitter playground
+  use { 'nvim-treesitter/playground' }
 
+  -- telescope
+  use {
+  'nvim-telescope/telescope.nvim',
+  requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
--- list of plugins
+  -- colorschemes
+  use { 'folke/tokyonight.nvim' }
+end)
 
-paq { 'savq/paq-nvim', opt = true }   -- paq-manger
-paq { 'neovim/nvim-lspconfig' }       -- lsp
-paq { 'kyazdani42/nvim-tree.lua' }    -- file explorer
-paq { 'folke/tokyonight.nvim' }       -- colorscheme
