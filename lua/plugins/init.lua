@@ -1,4 +1,4 @@
----|| @lua/plugins.lua ||---
+---|| @plugins/init.lua ||---
 
 local fn = vim.fn
 local install_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
@@ -38,4 +38,3 @@ function(use)
   -- colorschemes
   use { 'folke/tokyonight.nvim' }
 end)
-

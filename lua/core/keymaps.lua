@@ -1,4 +1,4 @@
----||  @lua/keymaps.lua  ||---
+---||  @core/keymaps.lua  ||---
 
 
 local map = vim.api.nvim_set_keymap

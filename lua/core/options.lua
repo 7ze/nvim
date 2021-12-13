@@ -1,4 +1,4 @@
----||  @lua/settings.lua  ||---
+---||  @core/options.lua  ||---
 
 
 -- colorscheme

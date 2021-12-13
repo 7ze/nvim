@@ -1,5 +1,4 @@
----||  @nvim_tree/init.lua  ||---
-
+---||  @configs/nvimtree.lua  ||---
 
 require'nvim-tree'.setup {
   disable_netrw       = true,

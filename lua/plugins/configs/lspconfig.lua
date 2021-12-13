@@ -1,10 +1,12 @@
----|| @lsp/servers.lua ||---
+---|| @configs/lspconfig.lua ||---
 
--- LSP servers to install
+-- list of servers to install
 
 local language_servers = {
   'tsserver',
 }
+
+-- setting up the servers
 
 for _, server in ipairs(language_servers) do
   require('lspconfig')[server].setup {}
