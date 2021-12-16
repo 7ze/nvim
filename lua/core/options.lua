@@ -1,16 +1,14 @@
 ---||  @core/options.lua  ||---
 
 
--- colorscheme
-vim.g.tokyonight_style = "night"
-vim.g.tokyonight_transparent = true
-vim.g.tokyonight_dark_sidebar = false
-vim.g.tokyonight_transparent_sidebar = true
-vim.cmd[[ colorscheme tokyonight ]]
+-- tab
+vim.o.expandtab = true
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
 
-
--- other settings
+-- misc
+vim.o.termguicolors = true
 vim.o.ignorecase = true
-vim.o.expandtab = true   -- convert tabs to spaces
-vim.o.list = true        -- show invisible characters
-vim.wo.rnu = true        -- relative numbers
+vim.o.list = true               -- show invisible characters
+vim.o.rnu = true                -- relative numbers

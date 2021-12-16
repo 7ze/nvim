@@ -36,5 +36,30 @@ function(use)
     }
 
   -- colorschemes
-  use { 'folke/tokyonight.nvim' }
+
+  use {
+        'sainnhe/gruvbox-material',
+        config = function()
+          vim.g.gruvbox_material_background = 'hard'
+          vim.g.gruvbox_material_enable_italic = 1
+          vim.g.gruvbox_material_enable_bold = 1
+          vim.g.gruvbox_material_transparent_background = 1
+          vim.g.gruvbox_material_ui_contrast = 'high'
+          vim.cmd [[ colorscheme gruvbox-material ]]
+        end
+     }
+
+  --[[
+  -- tokyonight colorscheme
+  use {
+        'folke/tokyonight.nvim',
+        config = function()
+          vim.g.tokyonight_style = "night"
+          vim.g.tokyonight_transparent = true
+          vim.g.tokyonight_dark_sidebar = false
+          vim.g.tokyonight_transparent_sidebar = true
+          vim.cmd 'colorscheme tokyonight'
+        end
+     }
+     ]]
 end)

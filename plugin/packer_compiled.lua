@@ -69,6 +69,12 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["gruvbox-material"] = {
+    config = { "\27LJ\1\2»\2\0\0\2\0\v\0\0254\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0'\1\1\0:\1\6\0004\0\0\0007\0\1\0%\1\b\0:\1\a\0004\0\0\0007\0\t\0%\1\n\0>\0\2\1G\0\1\0# colorscheme gruvbox-material \bcmd\thigh!gruvbox_material_ui_contrast,gruvbox_material_transparent_background!gruvbox_material_enable_bold#gruvbox_material_enable_italic\thard gruvbox_material_background\6g\bvim\0" },
+    loaded = true,
+    path = "/home/zeus/.local/share/nvim/site/pack/packer/start/gruvbox-material",
+    url = "https://github.com/sainnhe/gruvbox-material"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/zeus/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
@@ -104,15 +110,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/zeus/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
-  },
-  ["tokyonight.nvim"] = {
-    loaded = true,
-    path = "/home/zeus/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
-    url = "https://github.com/folke/tokyonight.nvim"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: gruvbox-material
+time([[Config for gruvbox-material]], true)
+try_loadstring("\27LJ\1\2»\2\0\0\2\0\v\0\0254\0\0\0007\0\1\0%\1\3\0:\1\2\0004\0\0\0007\0\1\0'\1\1\0:\1\4\0004\0\0\0007\0\1\0'\1\1\0:\1\5\0004\0\0\0007\0\1\0'\1\1\0:\1\6\0004\0\0\0007\0\1\0%\1\b\0:\1\a\0004\0\0\0007\0\t\0%\1\n\0>\0\2\1G\0\1\0# colorscheme gruvbox-material \bcmd\thigh!gruvbox_material_ui_contrast,gruvbox_material_transparent_background!gruvbox_material_enable_bold#gruvbox_material_enable_italic\thard gruvbox_material_background\6g\bvim\0", "config", "gruvbox-material")
+time([[Config for gruvbox-material]], false)
 if should_profile then save_profiles() end
 
 end)
