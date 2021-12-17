@@ -32,11 +32,18 @@ function(use)
   -- telescope
   use {
   'nvim-telescope/telescope.nvim',
-  requires = { {'nvim-lua/plenary.nvim'} }
+  requires = { 
+    { 'nvim-lua/plenary.nvim' },
+    { 'nvim-telescope/telescope-fzf-native.nvim', run='make' }
+      }
     }
+
+  -- devicons
+  use { 'kyazdani42/nvim-web-devicons' }
 
   -- colorschemes
 
+  -- gruvbox colorscheme
   use {
         'sainnhe/gruvbox-material',
         config = function()
@@ -48,18 +55,4 @@ function(use)
           vim.cmd [[ colorscheme gruvbox-material ]]
         end
      }
-
-  --[[
-  -- tokyonight colorscheme
-  use {
-        'folke/tokyonight.nvim',
-        config = function()
-          vim.g.tokyonight_style = "night"
-          vim.g.tokyonight_transparent = true
-          vim.g.tokyonight_dark_sidebar = false
-          vim.g.tokyonight_transparent_sidebar = true
-          vim.cmd 'colorscheme tokyonight'
-        end
-     }
-     ]]
 end)

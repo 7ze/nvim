@@ -1,6 +1,5 @@
 ---||  @core/options.lua  ||---
 
-
 -- tab
 vim.o.expandtab = true
 vim.o.tabstop = 2

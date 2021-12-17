@@ -53,3 +53,10 @@ map('n', '<C-j>', '<C-w>j', opts)
 map('n', '<C-k>', '<C-w>k', opts)
 map('n', '<C-l>', '<C-w>l', opts)
 
+
+-- telescope
+
+map('n', '<leader>ff', ':Telescope find_files<cr>', opts)
+map('n', '<leader>fg', ':Telescope live_grep<cr>', opts)
+map('n', '<leader>fb', ':Telescope buffers<cr>', opts)
+map('n', '<leader>fh', ':Telescope help_tags<cr>', opts)
