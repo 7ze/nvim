@@ -32,7 +32,7 @@ function(use)
   -- telescope
   use {
   'nvim-telescope/telescope.nvim',
-  requires = { 
+  requires = {
     { 'nvim-lua/plenary.nvim' },
     { 'nvim-telescope/telescope-fzf-native.nvim', run='make' }
       }
