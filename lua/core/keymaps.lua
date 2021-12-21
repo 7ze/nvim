@@ -36,6 +36,11 @@ map("n", "<C-j>", "<C-w>j", opts)
 map("n", "<C-k>", "<C-w>k", opts)
 map("n", "<C-l>", "<C-w>l", opts)
 
+-- resize with arrows
+map("n", "<C-up>", ":resize +2<CR>", opts)
+map("n", "<C-down>", ":resize -2<CR>", opts)
+map("n", "<C-left>", ":vertical resize -2<CR>", opts)
+map("n", "<C-right>", ":vertical resize +2<CR>", opts)
 
 -- navigate buffers
 map("n", "<S-l>", ":bnext<CR>", opts)
