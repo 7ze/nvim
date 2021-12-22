@@ -1,58 +1,64 @@
----|| @plugins/init.lua ||---
+-- @plugins/init.lua --
 
+-- bootstrapping
 local fn = vim.fn
-local install_path = fn.stdpath('data') .. '/site/pack/packer/opt/packer.nvim'
+local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
-  fn.system({ 'git', 'clone', '--depth=1', 'https://github.com/wbthomason/packer.nvim', install_path })
+  PACKER_BOOTSTRAP = fn.system {
+    "git",
+    "clone",
+    "--depth",
+    "1",
+    "https://github.com/wbthomason/packer.nvim",
+    install_path,
+  }
+  print "Installing packer..."
+  vim.cmd [[ packadd packer.nvim ]]
 end
 
--- loads packer
-vim.cmd [[packadd packer.nvim]]
+-- autocmd to packer sync whenever you save this file
+vim.cmd [[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost lua/plugins/init.lua source <afile> | PackerSync
+  augroup end
+]]
 
-return require('packer').startup(
-function(use)
-  -- packer
-  use { 'wbthomason/packer.nvim', opt = true }
+local status_ok, packer = pcall(require, "packer")
+-- exits if packer cannot be invoked
+if not status_ok then
+  vim.notify "Packer could not be loaded!"
+  return
+end
 
-  -- file explorer
-  use { 'kyazdani42/nvim-tree.lua' }
+-- custom initialization
+packer.init {
+  display = {
+    open_fn = function() return require("packer.util").float { border = "rounded" } end,  -- An optional function to open a floating window for packer
+    working_sym = '🛠', -- The symbol for a plugin being installed/updated
+    error_sym = '🧨', -- The symbol for a plugin with an error in installation/updating
+    done_sym = '🎉', -- The symbol for a plugin which has completed installation/updating
+    removed_sym = '🔥', -- The symbol for an unused plugin which was removed
+    moved_sym = '🚀', -- The symbol for a plugin which was moved (e.g. from opt to start)
+    header_sym = '━', -- The symbol for the header line in packer's display
+    show_all_info = true, -- Should packer show all update details automatically?
+    --prompt_border = 'double', -- Border style of prompt popups.
+  }
+}
 
-  -- lsp
-  use { 'neovim/nvim-lspconfig' }
+local use = packer.use
+packer.reset()
 
-  -- treesitter
-  use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
-  -- treesitter playground
-  use { 'nvim-treesitter/playground' }
+packer.startup(function()
+  print "From packer startup()"
 
-  -- telescope
-  use {
-  'nvim-telescope/telescope.nvim',
-  requires = {
-    { 'nvim-lua/plenary.nvim' },
-    { 'nvim-telescope/telescope-fzf-native.nvim', run='make' }
-      }
-    }
+  -- plugins
+  use "wbthomason/packer.nvim"
 
-  -- devicons
-  use { 'kyazdani42/nvim-web-devicons' }
-
-  -- colorschemes
-
-  -- gruvbox colorscheme
-  use {
-        'sainnhe/gruvbox-material',
-        config = function()
-          vim.g.gruvbox_material_background = 'hard'
-          vim.g.gruvbox_material_enable_italic = 1
-          vim.g.gruvbox_material_enable_bold = 1
-          vim.g.gruvbox_material_transparent_background = 1
-          vim.g.gruvbox_material_ui_contrast = 'high'
-          vim.cmd [[ colorscheme gruvbox-material ]]
-        end
-     }
+  -- automatically sets up plugins after bootstrap
+  if PACKER_BOOTSTRAP then
+    packer.sync()
+  end
 end)
+
