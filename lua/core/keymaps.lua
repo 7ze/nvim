@@ -19,8 +19,8 @@ map("i", "kj", "<esc>", opts)
 map("n", "<leader>e", ":Lex 17<CR>", opts)
 
 -- move selected line / block of text
-map("v", "K", ":move \"<-2<CR>gv-gv", opts)
-map("v", "J", ":move \">+1<CR>gv-gv", opts)
+map("v", "K", ":move \'<-2<CR>gv-gv", opts)
+map("v", "J", ":move \'>+1<CR>gv-gv", opts)
 
 -- indent
 map("v", "<", "<gv", opts)
