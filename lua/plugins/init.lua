@@ -52,7 +52,7 @@ packer.reset()
 
 packer.startup(function()
   -- plugins
-  use "wbthomason/packer.nvim"
+  use "wbthomason/packer.nvim" -- have packer manage itself
 
   -- automatically sets up plugins after bootstrap
   if PACKER_BOOTSTRAP then
