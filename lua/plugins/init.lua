@@ -54,6 +54,18 @@ packer.startup(function()
   -- plugins
   use "wbthomason/packer.nvim" -- have packer manage itself
 
+  -- completion
+  use "hrsh7th/nvim-cmp"
+  use "hrsh7th/cmp-buffer"
+  use "hrsh7th/cmp-path"
+  use "hrsh7th/cmp-nvim-lua"
+  use "hrsh7th/cmp-nvim-lsp"
+  use "saadparwaiz1/cmp_luasnip"
+
+  -- snippets
+  use "L3MON4D3/LuaSnip"
+  use "rafamadriz/friendly-snippets"
+
   -- automatically sets up plugins after bootstrap
   if PACKER_BOOTSTRAP then
     packer.sync()
