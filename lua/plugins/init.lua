@@ -54,6 +54,10 @@ packer.startup(function()
   -- plugins
   use "wbthomason/packer.nvim" -- have packer manage itself
 
+  -- lsp
+  use "neovim/nvim-lspconfig"
+  use "williamboman/nvim-lsp-installer"
+
   -- completion
   use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-buffer"
