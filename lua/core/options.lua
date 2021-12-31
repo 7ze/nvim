@@ -19,4 +19,5 @@ o.ignorecase = true                                          -- ignore case when
 o.termguicolors = true                                       -- supported by most terminals
 o.clipboard = "unnamedplus"                                  -- access system clipboard
 o.completeopt = "menu,menuone,noselect"                      -- for completion
-o.listchars="eol:↲,tab:>-,trail:~,extends:>,precedes:<"      -- list newline and trailing characters
+o.listchars = "eol:↲,tab:>-,trail:-,extends:>,precedes:<"    -- list newline and trailing characters
+
