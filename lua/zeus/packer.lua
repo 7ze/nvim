@@ -49,8 +49,9 @@ packer.reset()
 
 packer.startup(function()
   -- plugins
-  use "wbthomason/packer.nvim" -- have packer manage itself
+  use "wbthomason/packer.nvim"
   use "nvim-lua/plenary.nvim" -- util functions
+  use "kyazdani42/nvim-web-devicons"
 
   -- lsp
   use "neovim/nvim-lspconfig"
