@@ -4,8 +4,7 @@ local install_path = fn.stdpath("data") .. "/site/pack/packer/start/packer.nvim"
 
 if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
+    "git", "clone",
     "--depth",
     "1",
     "https://github.com/wbthomason/packer.nvim",
@@ -19,7 +18,7 @@ end
 vim.cmd [[
   augroup packer_user_config
     autocmd!
-    autocmd BufWritePost lua/plugins/init.lua source <afile> | PackerSync
+    autocmd BufWritePost lua/zeus/packer.lua source <afile> | PackerSync
   augroup end
 ]]
 
@@ -51,6 +50,7 @@ packer.reset()
 packer.startup(function()
   -- plugins
   use "wbthomason/packer.nvim" -- have packer manage itself
+  use "nvim-lua/plenary.nvim" -- util functions
 
   -- lsp
   use "neovim/nvim-lspconfig"
@@ -68,9 +68,11 @@ packer.startup(function()
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
 
+  -- telescope
+  use "nvim-telescope/telescope.nvim"
+
   -- automatically sets up plugins after bootstrap
   if PACKER_BOOTSTRAP then
     packer.sync()
   end
 end)
-
