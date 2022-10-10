@@ -54,7 +54,7 @@ nnoremap("<S-h>", ":bprevious<cr>")
 nnoremap("<leader>bd", ":bd<cr>")
 
 -- reload
-nnoremap("<leader>rr", ":luafile %<cr>")
+nnoremap("<leader>r", ":so %<cr>")
 
 -- centers cursor during motion
 nnoremap("n", "nzzzv")
@@ -66,3 +66,4 @@ nnoremap("<C-u>", "<C-u>zz")
 -- misc
 nnoremap("<leader>ss", ":!slock<cr>")
 nnoremap("<leader>q", ":q<cr>")
+nnoremap("<leader>w", ":w<cr>")
