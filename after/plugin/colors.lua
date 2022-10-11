@@ -1,4 +1,4 @@
-vim.g.zeus_colorscheme = "hybrid"
+vim.g.zeus_colorscheme = "codesmell_dark"
 
 function ColorMyPencils()
   vim.g.gruvbox_contrast_dark = 'hard'
