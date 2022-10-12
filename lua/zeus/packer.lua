@@ -74,6 +74,9 @@ packer.startup(function()
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
   use "nvim-telescope/telescope-file-browser.nvim"
 
+  -- misc
+  use "mbbill/undotree"
+
   -- automatically sets up plugins after bootstrap
   if PACKER_BOOTSTRAP then
     packer.sync()
