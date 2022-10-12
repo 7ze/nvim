@@ -72,6 +72,7 @@ packer.startup(function()
   -- telescope
   use "nvim-telescope/telescope.nvim"
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use "nvim-telescope/telescope-file-browser.nvim"
 
   -- automatically sets up plugins after bootstrap
   if PACKER_BOOTSTRAP then
