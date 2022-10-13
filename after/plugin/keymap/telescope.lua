@@ -13,3 +13,7 @@ end)
 nnoremap("<leader>fn", function()
   require("zeus.telescope").search_nvim_config()
 end)
+
+nnoremap("<leader>fw", function()
+  require("zeus.telescope").set_wallpaper()
+end)

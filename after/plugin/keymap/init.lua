@@ -63,8 +63,10 @@ nnoremap("J", "mzJ`z")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
+-- save and quit
+nnoremap("<leader>w", ":w<cr>")
+nnoremap("<leader>q", ":q<cr>")
+
 -- misc
 nnoremap("<leader>ss", ":!slock<cr>")
-nnoremap("<leader>q", ":q<cr>")
-nnoremap("<leader>w", ":w<cr>")
 nnoremap("<leader>u", ":UndotreeToggle<cr>")
