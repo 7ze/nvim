@@ -50,7 +50,8 @@ packer.reset()
 packer.startup(function()
   -- plugins
   use "wbthomason/packer.nvim"
-  use "nvim-lua/plenary.nvim" -- util functions
+  use "nvim-lua/popup.nvim"
+  use "nvim-lua/plenary.nvim"
   use "kyazdani42/nvim-web-devicons"
 
   -- lsp
