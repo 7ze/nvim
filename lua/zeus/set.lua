@@ -8,6 +8,7 @@ o.mouse = "a"
 o.wrap = false
 o.cursorline = true
 o.showmode = false
+o.colorcolumn = "80"
 
 o.expandtab = true
 o.tabstop = 4
