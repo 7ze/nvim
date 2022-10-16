@@ -28,14 +28,14 @@ o.swapfile = false
 o.backup = false
 o.undofile = true
 
-o.timeoutlen = 700                                           -- wait time for mapped sequences in ms
-o.updatetime = 50                                            -- longer updatetime leads to noticeable delays
+o.timeoutlen = 700 -- wait time for mapped sequences in ms
+o.updatetime = 50 -- longer updatetime leads to noticeable delays
 
 o.signcolumn = "yes"
-o.termguicolors = true                                       -- supported by most terminals
-o.path = o.path .. "**"                                      -- enable recursive search in cmd using find
-o.clipboard = "unnamedplus"                                  -- access system clipboard
-o.completeopt = "menu,menuone,noselect"                      -- completion
+o.termguicolors = true -- supported by most terminals
+o.path = o.path .. "**" -- enable recursive search in cmd using find
+o.clipboard = "unnamedplus" -- access system clipboard
+o.completeopt = "menu,menuone,noselect" -- completion
 
-o.list = true                                                -- show tabs and spaces
-o.listchars = "eol:↲,tab:>-,trail:-,extends:>,precedes:<"    -- list newline and trailing characters
+o.list = true -- show tabs and spaces
+o.listchars = "eol:↲,tab:>-,trail:-,extends:>,precedes:<" -- list newline and trailing characters
