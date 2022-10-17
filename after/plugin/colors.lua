@@ -1,4 +1,4 @@
-vim.g.zeus_colorscheme = "molokai"
+vim.g.zeus_colorscheme = "challenger_deep"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'
@@ -41,3 +41,11 @@ function ColorMyPencils()
 end
 
 ColorMyPencils()
+
+-- transparent menu
+vim.cmd [[
+hi Pmenu           guifg=#66D9EF guibg=#000000
+hi PmenuSel                      guibg=#808080
+hi PmenuSbar                     guibg=#080808
+hi PmenuThumb      guifg=#66D9EF
+]]
