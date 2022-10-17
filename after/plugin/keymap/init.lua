@@ -11,9 +11,6 @@ local nmap = Remap.nmap
 nmap("<space>", "<nop>")
 nmap("<enter>", "<nop>")
 
--- leader key
-vim.g.mapleader = " "
-
 -- easy escape
 inoremap("jk", "<esc>")
 inoremap("jj", "<esc>")

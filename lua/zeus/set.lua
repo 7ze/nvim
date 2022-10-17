@@ -1,5 +1,7 @@
 local o = vim.o
 
+vim.g.mapleader = " "
+
 o.number = true
 o.relativenumber = true
 o.numberwidth = 2

@@ -1,4 +1,4 @@
-vim.g.zeus_colorscheme = "ayu"
+vim.g.zeus_colorscheme = "molokai"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'
