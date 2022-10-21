@@ -1,4 +1,5 @@
 local actions = require("telescope.actions")
+local themes = require("telescope.themes")
 
 require("telescope").setup {
     defaults = {
@@ -50,15 +51,15 @@ require("telescope").load_extension("file_browser")
 local M = {};
 
 M.search_dotfiles = function()
-    require("telescope.builtin").find_files({
-        prompt_title = "< dots />",
+    require("telescope.builtin").find_files(themes.get_ivy{
+        prompt_title = "< dotfiles />",
         cwd = "~/dots/",
         hidden = true,
     })
 end
 
 M.search_nvim_config = function()
-    require("telescope.builtin").find_files({
+    require("telescope.builtin").find_files(themes.get_ivy{
         prompt_title = "< neovim config />",
         cwd = "~/.config/nvim/",
         hidden = true,
@@ -90,7 +91,8 @@ end
 
 local function image_selector(prompt, cwd)
     return function()
-        require("telescope.builtin").find_files({
+        require("telescope.builtin").find_files(themes.get_dropdown {
+            previewer = false,
             prompt_title = prompt,
             cwd = cwd,
             attach_mappings = function(prompt_bufnr, map)
