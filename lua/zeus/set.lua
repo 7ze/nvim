@@ -6,7 +6,7 @@ o.number = true
 o.relativenumber = true
 o.numberwidth = 2
 
-o.mouse = "a"
+o.mouse = ""
 o.wrap = false
 o.cursorline = true
 o.showmode = false
