@@ -67,3 +67,4 @@ nnoremap("<leader>q", ":q<cr>")
 -- misc
 nnoremap("<leader>ss", ":!slock<cr>")
 nnoremap("<leader>u", ":UndotreeToggle<cr>")
+nnoremap("<leader>x", ":!chmod +x %<cr>")
