@@ -65,6 +65,7 @@ nnoremap("<leader>w", ":w<cr>")
 nnoremap("<leader>q", ":q<cr>")
 
 -- misc
-nnoremap("<leader>ss", ":!slock<cr>")
+nnoremap("<leader>ss", "<cmd>silent !slock<cr>")
 nnoremap("<leader>u", ":UndotreeToggle<cr>")
-nnoremap("<leader>x", ":!chmod +x %<cr>")
+nnoremap("<leader>x", "<cmd>silent !chmod +x %<cr>")
+nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
