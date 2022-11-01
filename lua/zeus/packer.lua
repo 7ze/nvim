@@ -81,6 +81,7 @@ packer.startup(function()
     -- misc
     use "mbbill/undotree"
     use "ThePrimeagen/harpoon"
+    use "ThePrimeagen/vim-be-good"
 
     -- automatically sets up plugins after bootstrap
     if PACKER_BOOTSTRAP then
