@@ -104,6 +104,6 @@ local function image_selector(prompt, cwd)
     end
 end
 
-M.set_wallpaper = image_selector("< Choose your wallie /> ", "~/.local/share/backgrounds")
+M.set_wallpaper = image_selector("< Choose your wallie /> ", "~/media/pix/wallpapers/")
 
 return M
