@@ -42,6 +42,13 @@ require("telescope").setup {
                 hijack_netrw = true,
             }
         },
+    },
+    pickers = {
+        live_grep = {
+            additional_args = function()
+                return { "--hidden" }
+            end
+        }
     }
 }
 
@@ -51,7 +58,7 @@ require("telescope").load_extension("file_browser")
 local M = {};
 
 M.search_dotfiles = function()
-    require("telescope.builtin").find_files(themes.get_ivy{
+    require("telescope.builtin").find_files(themes.get_ivy {
         prompt_title = "< dotfiles />",
         cwd = "~/dots/",
         hidden = true,
@@ -59,7 +66,7 @@ M.search_dotfiles = function()
 end
 
 M.search_nvim_config = function()
-    require("telescope.builtin").find_files(themes.get_ivy{
+    require("telescope.builtin").find_files(themes.get_ivy {
         prompt_title = "< neovim config />",
         cwd = "~/.config/nvim/",
         hidden = true,
