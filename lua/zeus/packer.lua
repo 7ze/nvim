@@ -53,6 +53,7 @@ packer.startup(function()
     use "nvim-lua/popup.nvim"
     use "nvim-lua/plenary.nvim"
     use "kyazdani42/nvim-web-devicons"
+    use "nvim-lualine/lualine.nvim"
 
     -- lsp
     use "williamboman/mason.nvim"
@@ -79,7 +80,7 @@ packer.startup(function()
     -- treesitter
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    -- misc
+    -- misc utility
     use "mbbill/undotree"
     use "ThePrimeagen/harpoon"
     use "ThePrimeagen/vim-be-good"
