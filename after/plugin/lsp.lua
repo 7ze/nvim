@@ -14,7 +14,7 @@ local function config(_config)
             nnoremap("gl", function() vim.diagnostic.open_float() end)
             nnoremap("<leader>lf", function() vim.lsp.buf.format { async = true } end)
             nnoremap("<leader>li", "<cmd>LspInfo<cr>")
-            nnoremap("<leader>lI", "<cmd>LspInstallInfo<cr>")
+            nnoremap("<leader>lI", "<cmd>Mason<cr>")
             nnoremap("<leader>la", function() vim.lsp.buf.code_action() end)
             nnoremap("<leader>lj", function() vim.diagnostic.goto_next({ buffer = 0 }) end)
             nnoremap("<leader>lk", function() vim.diagnostic.goto_prev({ buffer = 0 }) end)
@@ -26,7 +26,8 @@ local function config(_config)
     }, _config or {})
 end
 
-require("nvim-lsp-installer").setup {}
+require("mason").setup()
+require("mason-lspconfig").setup()
 local lspconfig = require("lspconfig")
 
 local servers = {

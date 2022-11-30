@@ -1,4 +1,4 @@
-vim.g.zeus_colorscheme = "gruvbox"
+vim.g.zeus_colorscheme = "apprentice"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'

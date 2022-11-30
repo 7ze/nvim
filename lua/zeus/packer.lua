@@ -55,8 +55,9 @@ packer.startup(function()
     use "kyazdani42/nvim-web-devicons"
 
     -- lsp
+    use "williamboman/mason.nvim"
+    use "williamboman/mason-lspconfig.nvim"
     use "neovim/nvim-lspconfig"
-    use "williamboman/nvim-lsp-installer"
 
     -- completion
     use "hrsh7th/nvim-cmp"
