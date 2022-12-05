@@ -87,6 +87,9 @@ packer.startup(function()
     use "tpope/vim-commentary"
     use "tpope/vim-surround"
 
+    --theme
+    use "EdenEast/nightfox.nvim"
+
     -- automatically sets up plugins after bootstrap
     if PACKER_BOOTSTRAP then
         packer.sync()
