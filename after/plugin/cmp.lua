@@ -1,5 +1,15 @@
 local cmp = require("cmp")
 local luasnip = require("luasnip")
+local tabnine = require("cmp_tabnine.config")
+
+tabnine:setup({
+    max_lines = 1000,
+    max_num_results = 20,
+    sort = true,
+    run_on_every_keystroke = true,
+    snippet_placeholder = '..',
+    show_prediction_strength = false
+})
 
 require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -51,6 +61,7 @@ cmp.setup {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
     sources = cmp.config.sources {
+        { name = "cmp_tabnine" },
         { name = "nvim_lua" },
         { name = "nvim_lsp" },
         { name = "path" },
@@ -66,8 +77,20 @@ cmp.setup {
                 nvim_lua = "[NVIM_LUA]",
                 luasnip = "[Snippet]",
                 buffer = "[Buffer]",
+                cmp_tabnine = "[TN]",
                 path = "[Path]",
             })[entry.source.name]
+            if entry.source.name == "cmp_tabnine" then
+                local detail = (entry.completion_item.data or {}).detail
+                vim_item.kind = ""
+                if detail and detail:find('.*%%.*') then
+                    vim_item.kind = vim_item.kind .. ' ' .. detail
+                end
+
+                if (entry.completion_item.data or {}).multiline then
+                    vim_item.kind = vim_item.kind .. ' ' .. '[ML]'
+                end
+            end
             return vim_item
         end,
     },
