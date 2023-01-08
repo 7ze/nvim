@@ -1,4 +1,4 @@
-vim.g.zeus_colorscheme = "carbonfox"
+vim.g.zeus_colorscheme = "nightfox"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'
