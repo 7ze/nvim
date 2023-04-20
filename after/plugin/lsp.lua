@@ -43,13 +43,14 @@ local servers = {
     "rust_analyzer",
     "tsserver",
     "yamlls",
+    "ocamllsp"
 }
 
 for _, server in pairs(servers) do
     lspconfig[server].setup(config())
 end
 
-lspconfig.sumneko_lua.setup(config({
+lspconfig.lua_ls.setup(config({
     settings = {
         Lua = {
             runtime = {
