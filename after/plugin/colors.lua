@@ -1,4 +1,4 @@
-vim.g.zeus_colorscheme = "habamax"
+vim.g.zeus_colorscheme = "srcery"
 
 function ColorMyPencils()
     vim.g.gruvbox_contrast_dark = 'hard'

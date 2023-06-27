@@ -68,6 +68,7 @@ packer.startup(function()
     use "hrsh7th/cmp-nvim-lua"
     use "hrsh7th/cmp-nvim-lsp"
     use "saadparwaiz1/cmp_luasnip"
+    use "github/copilot.vim"
 
     -- snippets
     use "L3MON4D3/LuaSnip"
