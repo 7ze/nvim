@@ -69,3 +69,7 @@ nnoremap("<leader>ss", "<cmd>silent !slock<cr>")
 nnoremap("<leader>u", ":UndotreeToggle<cr>")
 nnoremap("<leader>x", "<cmd>silent !chmod +x %<cr>")
 nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
+
+-- python
+nnoremap("<leader>z", "<cmd>!python %<cr>")
+nnoremap("<leader>zz", "<cmd>term python %<cr>")
