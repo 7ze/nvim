@@ -89,6 +89,7 @@ packer.startup(function()
 	use("ThePrimeagen/harpoon")
 	use("ThePrimeagen/vim-be-good")
 	use("tpope/vim-commentary")
+	use("tpope/vim-fugitive")
 	use("tpope/vim-surround")
 	use({
 		"iamcco/markdown-preview.nvim",
