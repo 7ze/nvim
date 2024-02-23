@@ -73,6 +73,7 @@ local servers = {
 	"yamlls",
 	"ocamllsp",
 	"tailwindcss",
+	"ruff_lsp",
 }
 
 for _, server in pairs(servers) do
