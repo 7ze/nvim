@@ -62,18 +62,20 @@ local servers = {
 	"bashls",
 	"clangd",
 	"cssls",
+	"dockerls",
 	"emmet_ls",
 	"gopls",
 	"html",
+	"htmx",
 	"jsonls",
 	"marksman",
+	"ocamllsp",
 	"pyright",
+	"ruff_lsp",
 	"rust_analyzer",
+	"tailwindcss",
 	"tsserver",
 	"yamlls",
-	"ocamllsp",
-	"tailwindcss",
-	"ruff_lsp",
 }
 
 for _, server in pairs(servers) do
