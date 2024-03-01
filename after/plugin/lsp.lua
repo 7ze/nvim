@@ -76,6 +76,7 @@ local servers = {
 	"tailwindcss",
 	"tsserver",
 	"yamlls",
+    "zls",
 }
 
 for _, server in pairs(servers) do
