@@ -40,4 +40,4 @@ o.clipboard = "unnamedplus" -- access system clipboard
 o.completeopt = "menu,menuone,noselect" -- completion
 
 o.list = true -- show tabs and spaces
-o.listchars = "eol:↲,tab:>-,trail:-,extends:>,precedes:<" -- list newline and trailing characters
+vim.opt.listchars = { eol = "↲", tab = "» ", trail = "·", nbsp = "␣" } -- list tab and trailing characters
