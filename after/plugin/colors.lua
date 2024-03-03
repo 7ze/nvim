@@ -39,11 +39,3 @@ function ColorMyPencils()
 end
 
 ColorMyPencils()
-
--- transparent menu
-vim.cmd [[
-hi Pmenu           guifg=#66D9EF guibg=#000000
-hi PmenuSel                      guibg=#808080
-hi PmenuSbar                     guibg=#080808
-hi PmenuThumb      guifg=#66D9EF
-]]
