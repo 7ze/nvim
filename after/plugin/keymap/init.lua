@@ -6,7 +6,6 @@ local inoremap = Remap.inoremap
 local xnoremap = Remap.xnoremap
 local nmap = Remap.nmap
 
-
 -- unmapping space and enter
 nmap("<space>", "<nop>")
 nmap("<enter>", "<nop>")
@@ -17,11 +16,11 @@ inoremap("jj", "<esc>")
 inoremap("kj", "<esc>")
 
 -- explorer
-nnoremap("<leader>e", ":Lex 12<cr>")
+nnoremap("<leader>e", ":Ex<cr>")
 
 -- move selected line / block of text
-vnoremap("K", ":move \'<-2<cr>gv-gv")
-vnoremap("J", ":move \'>+1<cr>gv-gv")
+vnoremap("K", ":move '<-2<cr>gv-gv")
+vnoremap("J", ":move '>+1<cr>gv-gv")
 
 -- indent
 vnoremap("<", "<gv")
@@ -60,16 +59,21 @@ nnoremap("J", "mzJ`z")
 nnoremap("<C-d>", "<C-d>zz")
 nnoremap("<C-u>", "<C-u>zz")
 
+-- diagnostics
+nnoremap("[d", vim.diagnostic.goto_prev, { desc = "go to previous diagnostic" })
+nnoremap("]d", vim.diagnostic.goto_next, { desc = "go to next diagnostic" })
+nnoremap("<leader>de", vim.diagnostic.open_float, { desc = "open diagnostics" })
+
 -- save and quit
 nnoremap("<leader>w", ":w<cr>")
 nnoremap("<leader>q", ":q<cr>")
 
 -- misc
-nnoremap("<leader>ss", "<cmd>silent !slock<cr>")
-nnoremap("<leader>u", ":UndotreeToggle<cr>")
-nnoremap("<leader>x", "<cmd>silent !chmod +x %<cr>")
-nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>")
+nnoremap("<leader>ss", "<cmd>silent !slock<cr>", { desc = "lock screen" })
+nnoremap("<leader>u", ":UndotreeToggle<cr>", { desc = "undo tree" })
+nnoremap("<leader>x", "<cmd>silent !chmod +x %<cr>", { desc = "make file executable" })
+nnoremap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<cr>", { desc = "open tmux sessionizer" })
 
 -- python
-nnoremap("<leader>z", "<cmd>!python %<cr>")
-nnoremap("<leader>zz", "<cmd>term python %<cr>")
+nnoremap("<leader>z", "<cmd>!python %<cr>", { desc = "run python file" })
+nnoremap("<leader>zz", "<cmd>term python %<cr>", { desc = "open python terminal and execute file" })

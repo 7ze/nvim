@@ -100,9 +100,6 @@ packer.startup(function()
 		ft = { "markdown" },
 	})
 
-	--theme
-	use("EdenEast/nightfox.nvim")
-
 	-- automatically sets up plugins after bootstrap
 	if PACKER_BOOTSTRAP then
 		packer.sync()
