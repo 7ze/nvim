@@ -1,9 +1,31 @@
-require 'nvim-treesitter.configs'.setup {
-    ensure_installed = {"c", "cpp" , "python", "rust", "ocaml", "go", "bash", "awk", "html", "css", "javascript", "dockerfile", "ruby", "lua", "regex", "sql", "zig"},
-    sync_install = true,
+require("nvim-treesitter.configs").setup({
+	ensure_installed = {
+		"awk",
+		"bash",
+		"c",
+		"cpp",
+		"css",
+		"dockerfile",
+		"go",
+		"html",
+		"javascript",
+		"lua",
+		"markdown",
+		"ocaml",
+		"python",
+		"regex",
+		"ruby",
+		"rust",
+		"sql",
+		"typescript",
+		"vim",
+		"vimdoc",
+		"zig",
+	},
+	sync_install = true,
 
-    highlight = {
-        enable = true,
-        additional_vim_regex_highlighting = false,
-    }
-}
+	highlight = {
+		enable = true,
+		additional_vim_regex_highlighting = false,
+	},
+})

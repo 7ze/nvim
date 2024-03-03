@@ -59,6 +59,7 @@ require("mason-lspconfig").setup()
 local lspconfig = require("lspconfig")
 
 local servers = {
+    "ansiblels",
 	"bashls",
 	"clangd",
 	"cssls",
