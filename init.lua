@@ -1,1 +1,1 @@
-require("zeus")
+require 'zeus'

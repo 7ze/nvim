@@ -1,3 +1,2 @@
-require("zeus.set")
-require("zeus.packer")
-require("zeus.telescope")
+require 'zeus.set'
+require 'zeus.lazy'
