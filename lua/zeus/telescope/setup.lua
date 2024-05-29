@@ -19,8 +19,8 @@ require('telescope').setup {
     winblend = 15,
     mappings = {
       i = {
-        ['<C-j>'] = actions.move_selection_next,
-        ['<C-k>'] = actions.move_selection_previous,
+        -- ['<C-j>'] = actions.move_selection_next,
+        -- ['<C-k>'] = actions.move_selection_previous,
         ['<C-u>'] = false, -- clears prompt
         ['<M-p>'] = action_layout.toggle_preview, -- toggle preview
         ['<C-h>'] = actions.which_key,

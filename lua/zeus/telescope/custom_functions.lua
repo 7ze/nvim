@@ -16,7 +16,7 @@ local function select_background(prompt_bufnr, map)
     end
   end
 
-  map('i', '<C-p>', function()
+  map('i', '<C-y>', function()
     set_the_background()
   end)
 

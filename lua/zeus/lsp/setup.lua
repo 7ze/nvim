@@ -23,7 +23,7 @@ local servers = {
   'jsonls',
   'lua_ls',
   'marksman',
-  'ocamllsp',
+  -- 'ocamllsp',
   'pyright',
   'ruff_lsp',
   'rust_analyzer',
