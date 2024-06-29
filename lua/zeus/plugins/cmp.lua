@@ -11,15 +11,17 @@ return { -- Autocompletion
   },
   config = function()
     local cmp = require 'cmp'
-    local luasnip = require 'luasnip'
-    require('luasnip.loaders.from_vscode').lazy_load()
+    local ls = require 'luasnip'
 
-    luasnip.config.setup {}
+    require('luasnip.loaders.from_vscode').lazy_load()
+    require('luasnip.loaders.from_lua').lazy_load { paths = './snippets' }
+
+    ls.config.setup {}
 
     cmp.setup {
       snippet = {
         expand = function(args)
-          luasnip.lsp_expand(args.body)
+          ls.lsp_expand(args.body)
         end,
       },
       completion = { completeopt = 'menu,menuone,noinsert' },
@@ -31,14 +33,14 @@ return { -- Autocompletion
         ['<C-Space>'] = cmp.mapping.complete {},
         -- <C-l> will move you to the next snippet's placeholder
         ['<C-l>'] = cmp.mapping(function()
-          if luasnip.expand_or_locally_jumpable() then
-            luasnip.expand_or_jump()
+          if ls.expand_or_locally_jumpable() then
+            ls.expand_or_jump()
           end
         end, { 'i', 's' }),
         -- <C-h> will move you to the previous snippet's placeholder
         ['<C-h>'] = cmp.mapping(function()
-          if luasnip.expand_or_locally_jumpable(-1) then
-            luasnip.jump(-1)
+          if ls.expand_or_locally_jumpable(-1) then
+            ls.jump(-1)
           end
         end, { 'i', 's' }),
       },
