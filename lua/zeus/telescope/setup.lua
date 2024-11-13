@@ -9,18 +9,16 @@ require('telescope').setup {
     layout_config = {
       horizontal = {
         prompt_position = 'top',
-        preview_width = 0.7,
-        results_width = 0.5,
+        preview_width = 0.6,
+        results_width = 0.4,
       },
-      width = 0.7,
-      height = 0.7,
+      width = 0.5,
+      height = 0.6,
     },
     file_ignore_patterns = { '.git/', '%.pdf', '%.ttf', '%.otf', '%.mkv', '%.mp4', '%.zip', 'node_modules' },
-    winblend = 15,
+    winblend = 25,
     mappings = {
       i = {
-        -- ['<C-j>'] = actions.move_selection_next,
-        -- ['<C-k>'] = actions.move_selection_previous,
         ['<C-u>'] = false, -- clears prompt
         ['<M-p>'] = action_layout.toggle_preview, -- toggle preview
         ['<C-h>'] = actions.which_key,
@@ -53,6 +51,10 @@ require('telescope').setup {
     },
     find_files = {
       hidden = true,
+      previewer = false,
+      layout_config = {
+        prompt_position = 'bottom',
+      },
     },
     help_tags = {
       mappings = {

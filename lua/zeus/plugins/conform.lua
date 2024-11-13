@@ -10,10 +10,10 @@ return {
     formatters_by_ft = {
       c = { 'clang_format' },
       cpp = { 'clang_format' },
-      go = { 'goimports', 'gofmt' },
+      go = { 'goimports', 'gofmt', stop_after_first = true },
       lua = { 'stylua' },
       python = { 'ruff_format' },
-      javascript = { { 'prettierd', 'prettier' } },
+      javascript = { 'prettierd', 'prettier', stop_after_first = true },
     },
   },
 }

@@ -11,6 +11,7 @@ end
 
 -- servers without additional config
 local servers = {
+  'astro',
   'ansiblels',
   'bashls',
   'clangd',
@@ -18,6 +19,7 @@ local servers = {
   'dockerls',
   'emmet_ls',
   'gopls',
+  'hls',
   'html',
   'htmx',
   'jsonls',
@@ -25,10 +27,10 @@ local servers = {
   'marksman',
   -- 'ocamllsp',
   'pyright',
-  'ruff_lsp',
+  'ruff',
   'rust_analyzer',
   'tailwindcss',
-  'tsserver',
+  'ts_ls',
   'yamlls',
   'zls',
 }
@@ -38,6 +40,10 @@ for _, server in pairs(servers) do
 end
 
 -- servers with additional config
+lspconfig.html.setup {
+  filetypes = { 'html', 'htmldjango' },
+}
+
 lspconfig.lua_ls.setup(config {
   settings = {
     Lua = {
@@ -61,10 +67,6 @@ lspconfig.lua_ls.setup(config {
     },
   },
 })
-
-lspconfig.html.setup {
-  filetypes = { 'html', 'htmldjango' },
-}
 
 local ensure_installed = servers
 vim.list_extend(ensure_installed, { 'stylua' })
